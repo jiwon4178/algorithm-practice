@@ -23,9 +23,10 @@ def bfs():
                 if maps[next_x][next_y] == 0: # 아기상어 없음
                     queue.append((next_x, next_y))
                     maps[next_x][next_y] = maps[cur_x][cur_y] + 1
-                    ans = maps[next_x][next_y]    
+                    ans = max(ans, maps[next_x][next_y])     
 
     return ans -1
 
 
 print(bfs())
+
