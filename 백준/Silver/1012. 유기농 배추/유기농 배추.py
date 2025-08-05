@@ -1,3 +1,4 @@
+## dfs 
 import sys
 sys.setrecursionlimit(10**6)
 
@@ -24,10 +25,12 @@ for i in range(T):
     graph = [[0] * N for _ in range(M)] # M X N (가로 X 세로 길이)
     answer = 0 
 
+		# 배추 위치 표시 
     for _ in range(K):
         x, y = map(int, input().split())
         graph[x][y] = 1
     
+    # 전체 순회 
     for x in range(M):
         for y in range(N):
             if graph[x][y] == 1:
