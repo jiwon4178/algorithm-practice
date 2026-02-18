@@ -37,7 +37,6 @@ def topology_sort():
             if indegree[nxt] == 0:
                 q.append(nxt)
 
-    # result.reverse()
     for k in result: 
         print(k, end = " ")
 
